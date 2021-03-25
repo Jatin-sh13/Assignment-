@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        padding: 10px;
+    }
+
+    button {
+        padding: 5px;
+    }
+
+    #output-para {
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <center><input type="text" placeholder="Enter Time in Seconds" id="input-sec" value=""></center><br>
+    <center><button onclick="f1()">submit</button></center>
+    <center>
+        <p id="output-para"></p>
+    </center>
+</body>
+<script>
+    function f1() {
+        let InputValue = document.getElementById('input-sec').value
+        let SEC = InputValue % 60;
+        let MIN_temp = InputValue / 60;
+        let MIN = MIN_temp % 60;
+        let HOUR = InputValue / 3600;
+        let a = document.getElementById('output-para')
+        a.innerHTML = `Output = ${parseInt(HOUR)}:${parseInt(MIN)}:${parseInt(SEC)}`;
+        console.log(parseInt(HOUR))
+        console.log(parseInt(MIN))
+        console.log(parseInt(SEC))
+    }
+</script>
+
+</html>

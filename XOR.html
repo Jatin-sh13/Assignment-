@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        padding: 10px;
+    }
+
+    button {
+        padding: 5px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <input type="text" placeholder="Enter Value of L" id="valueL" value="">
+    <input type="text" placeholder="Enter Value of R" id="valueR" value="">
+    <button onclick="Xorfun()">Submit</button>
+    <p id="Result-para"></p>
+</body>
+<script>
+    function Xorfun() {
+        let l = document.getElementById("valueL").value;
+        let r = document.getElementById("valueR").value;
+        let result = l ^ r;
+        if (result % 2 === 0) {
+            document.getElementById('Result-para').textContent = `XOR of Number ${l} and ${r} is : Even`
+        }
+        else {
+            document.getElementById('Result-para').textContent = `XOR of Number ${l} and ${r} is : Odd`
+        }
+    }
+</script>
+
+</html>

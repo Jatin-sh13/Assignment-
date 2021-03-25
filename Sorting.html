@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        padding: 10px;
+    }
+
+    button {
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <input type="text" placeholder="Enter Array Length" value="" id="InputValue">
+    <button onclick="f1()">Submit</button>
+    <p id="input-val"></p>
+    <p id="output-val"></p>
+</body>
+<script>
+    function f1() {
+        let x = document.getElementById('InputValue').value;
+        let arr = [];
+        for (let index = 0; index < x; index++) {
+            arr[index] = prompt(`Enter String ${index + 1}`)
+
+        }
+        document.getElementById('input-val').textContent = `Input Values:${arr}`
+        let output = arr.sort()
+        console.log(output)
+        document.getElementById('output-val').textContent = `Output : ${output}`
+    }
+</script>
+
+</html>
